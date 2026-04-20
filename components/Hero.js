@@ -28,11 +28,15 @@ export default function Hero() {
       <div className="container mx-auto px-6 grid md:grid-cols-2 relative z-30">
         <div className="hidden md:block" />
         <div className="text-white space-y-8 animate-in fade-in slide-in-from-right duration-1000">
+            <h1 className="text-4xl md:text-5xl font-white uppercase italic tracking-tight">
+              SECURITY GUARD SERVICE
+            </h1>
           <p className="text-lg md:text-xl leading-relaxed font-light text-gray-200">
+            
             We are experts in helping you find a solution to your problem. Our team includes male & female investigators possessing many years of experience.
           </p>
         
-        <a href="#contact-us">
+        <a href="tel:+17789107666">
             <button className="bg-[#e63928] hover:bg-red-700 hover:scale-105 transition-all text-white px-12 py-4 rounded-full text-lg font-bold shadow-2xl uppercase tracking-widest">
                 Contact Us
              </button>
