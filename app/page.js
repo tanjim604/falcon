@@ -10,8 +10,8 @@ export default function Home() {
     <main className="bg-brand-dark min-h-screen">
       <Navbar />
       <Hero />
-      <ServiceGrid />
       <FeatureCards />
+      <ServiceGrid />
       <ContactForm />
       <Footer />
     </main>
