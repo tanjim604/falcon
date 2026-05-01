@@ -15,8 +15,8 @@ export default function ServiceGrid() {
     },
     { 
       title: "DIVERSE", 
-      img: "/diverse_new.jpg",
-      desc: "Providing versatile security solutions tailored to commercial, residential, and event-specific needs."
+      img: "/diverseAll2.jpg",
+      desc: "Providing versatile security solutions taxilored to commercial, residential, and event-specific needs."
     },
   ];
 

@@ -5,7 +5,7 @@ export default function FeatureCards() {
     {
       title: "Event Security",
       desc: "Trained security personnel for events of all sizes, ensuring crowd control, access management, and a safe environment for guests, staff, and organizers.",
-      img: "/event.jpg", // Replace with our actual file names
+      img: "/event.jpg", 
     },
     {
       title: "Static Guarding",
@@ -35,9 +35,8 @@ export default function FeatureCards() {
           {services.map((service, i) => (
             <div 
               key={i} 
-              className="bg-black/30 backdrop-blur-md rounded-2xl border border-white/5 flex flex-col p-5 hover:border-[#e63928]/40 transition-all duration-500 group"
+              className="bg-black/30 backdrop-blur-md rounded-2xl border border-white/5 flex flex-col p-5 hover:border-[#e63928]/40 transition-all duration-500 group shadow-xl"
             >
-              {/* Image Container */}
               <div className="relative h-48 w-full rounded-xl overflow-hidden mb-6 border border-white/10">
                 <Image 
                   src={service.img} 
@@ -46,7 +45,6 @@ export default function FeatureCards() {
                   className="object-cover object-top group-hover:scale-110 transition-transform duration-700" 
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
-                {/* Red Overlay on Hover */}
                 <div className="absolute inset-0 bg-[#e63928]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
               
@@ -58,9 +56,12 @@ export default function FeatureCards() {
                 {service.desc}
               </p>
               
-              <button className="mt-auto w-full bg-[#e63928] hover:bg-red-700 text-white text-[10px] py-3 rounded-lg font-black uppercase tracking-widest transition-all shadow-lg active:scale-95">
-                Know More
-              </button>
+              {/* This anchor points directly to the form container ID */}
+              <a href="#form-anchor" className="mt-auto block w-full"> 
+                <button className="w-full bg-[#e63928] hover:bg-red-700 text-white text-[10px] py-3 rounded-lg font-black uppercase tracking-widest transition-all shadow-lg active:scale-95">
+                  Get A Quote
+                </button>
+              </a>
             </div>
           ))}
         </div>

@@ -14,7 +14,6 @@ export default function Navbar() {
     { name: 'About Us', href: '#about-us' },
     { name: 'Contact Us', href: '#contact-us' },
     { name: 'Careers', href: '#careers' },
-    { name: 'News', href: '#news' },
   ];
 
   return (
