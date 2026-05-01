@@ -2,9 +2,10 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ServiceGrid from '@/components/ServiceGrid';
 import FeatureCards from '@/components/FeatureCards';
-import Footer from '@/components/Footer';
-import ContactForm from '@/components/ContactForm';
 import WhyUs from '@/components/WhyUs';
+import SubContract from '@/components/SubContract'; // Added this import
+import ContactForm from '@/components/ContactForm';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
@@ -12,8 +13,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <FeatureCards />
-      <WhyUs/>
+      <WhyUs />
       <ServiceGrid />
+      <SubContract /> 
       <ContactForm />
       <Footer />
     </main>

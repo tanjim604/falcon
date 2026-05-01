@@ -10,7 +10,7 @@ export default function FeatureCards() {
     {
       title: "Static Guarding",
       desc: "Highly trained security personnel for continuous presence and access control to secure your premises.",
-      img: "/static.jpg",
+      img: "/static3.jpg",
     },
     {
       title: "Mobile Patrols",
@@ -25,9 +25,9 @@ export default function FeatureCards() {
   ];
 
   return (
-    <section id="services" className="bg-transparent py-24 px-6">
+    <section id="services" className=" bg-white py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-black text-center mb-16 uppercase italic text-white tracking-tight">
+        <h2 className="text-3xl md:text-4xl font-black text-center mb-16 uppercase italic text-black tracking-tight">
           Take A Look At <span className="text-[#e63928]">Services We Provide</span>
         </h2>
         
@@ -35,28 +35,35 @@ export default function FeatureCards() {
           {services.map((service, i) => (
             <div 
               key={i} 
-              className="bg-black/30 backdrop-blur-md rounded-2xl border border-white/5 flex flex-col p-5 hover:border-[#e63928]/40 transition-all duration-500 group shadow-xl"
+              className="backdrop-blur-md rounded-2xl border border-white/5 flex flex-col p-5 hover:border-[#e63928]/40 transition-all duration-500 group shadow-2xl"
             >
               <div className="relative h-48 w-full rounded-xl overflow-hidden mb-6 border border-white/10">
                 <Image 
                   src={service.img} 
                   alt={service.title} 
                   fill 
-                  className="object-cover object-top group-hover:scale-110 transition-transform duration-700" 
+                  className="object-cover group-hover:scale-110 transition-transform duration-700" 
+                  /* 
+                      CUSTOM ALIGNMENT LOGIC:
+                      - 50% is horizontal center.
+                      - 10% is vertical (Adjust this 10% lower to show more of the top).
+                  */
+                  style={{ 
+                    objectPosition: i === 1 ? '50% 35%' : 'center' 
+                  }}
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-[#e63928]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
               
-              <h3 className="text-lg font-black mb-3 text-white uppercase leading-tight tracking-tight">
+              <h3 className="text-lg font-black mb-3 text-red-700 uppercase leading-tight tracking-tight">
                 {service.title}
               </h3>
               
-              <p className="text-gray-400 text-[11px] mb-6 leading-relaxed">
+              <p className="text-black text-[11px] mb-6 leading-relaxed">
                 {service.desc}
               </p>
               
-              {/* This anchor points directly to the form container ID */}
               <a href="#form-anchor" className="mt-auto block w-full"> 
                 <button className="w-full bg-[#e63928] hover:bg-red-700 text-white text-[10px] py-3 rounded-lg font-black uppercase tracking-widest transition-all shadow-lg active:scale-95">
                   Get A Quote

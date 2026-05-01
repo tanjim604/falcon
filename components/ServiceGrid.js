@@ -5,17 +5,17 @@ export default function ServiceGrid() {
   const cards = [
     { 
       title: "EFFECTIVE", 
-      img: "/effective.jpg",
+      img: "/effective2.jpg",
       desc: "Our strategic approach ensures maximum security coverage with rapid response times and reliable oversight." 
     },
     { 
       title: "PROFESSIONAL", 
-      img: "/professional.jpg",
+      img: "/prof.jpg",
       desc: "Highly trained personnel committed to the highest standards of integrity, appearance, and conduct."
     },
     { 
       title: "DIVERSE", 
-      img: "/diverseAll2.jpg",
+      img: "/diversity.jpg",
       desc: "Providing versatile security solutions taxilored to commercial, residential, and event-specific needs."
     },
   ];
@@ -39,7 +39,7 @@ export default function ServiceGrid() {
                 src={card.img} 
                 alt={card.title} 
                 fill 
-                className="object-cover object-top group-hover:scale-105 transition-transform duration-700" 
+                className="object-cover group-hover:scale-105 transition-transform duration-700" 
                 sizes="(max-width: 768px) 100vw, 33vw"
               />
             </div>
