@@ -2,26 +2,26 @@ import Image from 'next/image';
 
 export default function FeatureCards() {
   const services = [
-    {
-      title: "Event Security",
-      desc: "Trained security personnel for events of all sizes, ensuring crowd control, access management, and a safe environment for guests, staff, and organizers.",
-      img: "/event.jpg", 
-    },
-    {
-      title: "Static Guarding",
-      desc: "Highly trained security personnel for continuous presence and access control to secure your premises.",
-      img: "/static3.jpg",
-    },
-    {
-      title: "Mobile Patrols",
-      desc: "Randomized, thorough security sweeps across large properties to deter criminal activity effectively.",
-      img: "/patrol.jpg",
-    },
-    {
-      title: "Alarm Response",
-      desc: "Rapid response to alarm activations with on-site inspection and threat management to keep your property secure at all times.",
-      img: "/alarm.jpg",
-    }
+   {
+  title: "Event Security",
+  desc: "Trained professionals for events of all sizes. We specialize in crowd control, access management, bag checks, and guest safety. Our team ensures a smooth, secure environment so your event runs without disruption.",
+  img: "/event.jpg", 
+  },
+{
+    title: "Static Guarding",
+    desc: "Reliable on-site protection for your property. We provide security for construction sites, retail stores, residential buildings, clubs, and bars, with strong presence, access control, and incident prevention.",
+    img: "/static3.jpg",
+  },
+  {
+    title: "Mobile Patrols",
+    desc: "Flexible patrols to keep your property secure. Our mobile units conduct randomized and scheduled patrols, checking your site as frequently as needed to deter crime and ensure everything stays under control.",
+    img: "/patrol.jpg",
+  },
+  {
+    title: "Alarm Response",
+    desc: "24/7 rapid response when it matters most. We respond immediately to alarm activations, handle trespassing, site checks, and safe removals, ensuring your property remains protected at all times.",
+    img: "/alarm.jpg",
+  }
   ];
 
   return (

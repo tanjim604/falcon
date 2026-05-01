@@ -30,7 +30,10 @@ export default function Hero() {
               SECURITY GUARD SERVICE
             </h1>
           <p className="text-lg md:text-xl leading-relaxed font-light text-gray-200 max-w-lg">
-            We are experts in helping you find a solution to your problem. Our team includes male & female investigators possessing many years of experience.
+            High Standards. Affordable Protection. <br></br><br></br>
+
+            Locally owned in Kamloops, we provide 24/7 professional security for events, retail, construction, and patrols. We deliver reliable, high-standard protection at affordable rates, ensuring your business stays secure without overpaying.
+            <br></br><br></br>Strong presence. Trusted service. Affordable pricing — built for your business.
           </p>
         
           <a href="tel:+17789107666">
