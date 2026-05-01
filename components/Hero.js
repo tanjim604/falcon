@@ -5,11 +5,11 @@ export default function Hero() {
     <section 
       id="home" 
       /* 
-         THE FIX:
-         - Mobile: 'h-auto aspect-video' matches the image shape so NO cropping happens.
-         - Laptop: 'md:h-[85vh]' keeps your perfect original desktop view.
+         FIX: Added pt-32 (Top spacing for navbar) and pb-20 (Bottom spacing for button).
+         'md:py-0' ensures these gaps don't appear on laptop view.
+         Removed 'aspect-video' to allow the container to grow with the text.
       */
-      className="relative h-auto aspect-video md:aspect-auto md:h-[85vh] w-full flex items-center overflow-hidden bg-black"
+      className="relative w-full flex items-center overflow-hidden pt-32 pb-20 md:py-0 md:h-[85vh] bg-black"
     >
       
       {/* 1. THE IMAGE LAYER */}
@@ -19,10 +19,10 @@ export default function Hero() {
           alt="Falcon Security Guard" 
           fill 
           /* 
-             Using 'object-contain' on mobile ensures 100% of the image is seen.
-             'md:object-cover' keeps the full-screen look on laptop.
+             'object-cover' is used here so the background stretches 
+             to cover the full height of your text + padding on mobile.
           */
-          className="object-contain md:object-cover blur-[2px]" 
+          className="object-cover blur-[2px]" 
           style={{ objectPosition: 'center 75%' }} 
           priority 
         />
@@ -35,7 +35,7 @@ export default function Hero() {
       </div>
 
       {/* 3. THE CONTENT LAYER */}
-      <div className="container mx-auto px-6 grid md:grid-cols-2 relative z-30 py-12 md:py-0">
+      <div className="container mx-auto px-6 grid md:grid-cols-2 relative z-30">
         <div className="text-white space-y-6 md:space-y-8 animate-in fade-in slide-in-from-left duration-1000">
             <h1 className="text-3xl md:text-5xl font-white uppercase italic tracking-tight">
               SECURITY GUARD SERVICE
