@@ -14,20 +14,14 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
-
       if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling Down - Hide
         setIsVisible(false);
         setIsOpen(false); 
       } else {
-        // Scrolling Up - Show
         setIsVisible(true);
-        
       }
-      
       setLastScrollY(currentScrollY);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
@@ -44,11 +38,10 @@ export default function Navbar() {
   return (
     <>
       {/* 
-          BACKGROUND SPACER: 
-          This 'div' stays in the document flow to push your Hero section down.
-          It uses 'bg-brand-nav' to match your site's dark theme perfectly.
+          SPACER: Increased to h-28 on mobile so the larger logo 
+          doesn't cover your Hero section content.
       */}
-      <div className="h-20 md:h-24 w-full bg-brand-nav" />
+      <div className="h-28 md:h-24 w-full bg-brand-nav" />
 
       <nav 
         className={`
@@ -64,9 +57,15 @@ export default function Navbar() {
               <Image 
                 src="/falcon-logo.png" 
                 alt="Falcon Security Logo"
-                width={200} 
-                height={80}
-                className="h-10 md:h-14 w-auto object-contain scale-110 md:scale-125"
+                width={300} 
+                height={120}
+                /* 
+                   MOBILE FIX: 
+                   - Changed h-14 to h-20 for a much larger presence.
+                   - Increased scale-125 to scale-150.
+                   - md:h-14 keeps the laptop size exactly as it was.
+                */
+                className="h-20 md:h-14 w-auto object-contain scale-150 md:scale-125 origin-left"
                 priority 
               />
             </Link>
