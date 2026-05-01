@@ -90,7 +90,7 @@ export default function SubContract() {
                   id="location"
                   type="text" 
                   name="location" 
-                  placeholder="e.g. Kamloops, Kelowna, Vancouver" 
+                  placeholder="e.g. Kamloops, Merritt, Vernon" 
                   className="w-full p-4 bg-gray-50 border border-gray-300 rounded-xl text-black placeholder:text-gray-400 focus:outline-none focus:border-brand-red focus:bg-white transition-all shadow-sm"
                 />
               </div>
