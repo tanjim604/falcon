@@ -37,10 +37,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* 
-          SPACER: Increased to h-28 on mobile so the larger logo 
-          doesn't cover your Hero section content.
-      */}
       <div className="h-28 md:h-24 w-full bg-brand-nav" />
 
       <nav 
@@ -49,7 +45,11 @@ export default function Navbar() {
           ${isVisible ? "translate-y-0" : "-translate-y-full"}
         `}
       >
-        <div className="container mx-auto px-6 flex items-center justify-between">
+        {/* 
+            CONTAINER ADJUSTMENT: 
+            Changed 'px-6' to 'px-2 md:px-6' to allow the logo to sit closer to the left edge on mobile.
+        */}
+        <div className="container mx-auto px-2 md:px-6 flex items-center justify-between">
           
           {/* Logo Section */}
           <div className="flex items-center gap-3 shrink-0">
@@ -60,12 +60,12 @@ export default function Navbar() {
                 width={300} 
                 height={120}
                 /* 
-                   MOBILE FIX: 
-                   - Changed h-14 to h-20 for a much larger presence.
-                   - Increased scale-125 to scale-150.
-                   - md:h-14 keeps the laptop size exactly as it was.
+                   FIX: 
+                   - Added '-ml-4' on mobile to pull the logo further left.
+                   - 'md:ml-0' resets it for laptop view.
+                   - Kept h-20 and scale-150 for the large presence you liked.
                 */
-                className="h-20 md:h-14 w-auto object-contain scale-150 md:scale-125 origin-left"
+                className="h-20 md:h-14 w-auto object-contain scale-150 md:scale-125 origin-left -ml-4 md:ml-0"
                 priority 
               />
             </Link>
