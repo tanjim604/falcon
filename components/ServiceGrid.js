@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 export default function ServiceGrid() {
-  // 1. Added 'desc' property to each card object
   const cards = [
     { 
       title: "EFFECTIVE", 
@@ -16,12 +15,12 @@ export default function ServiceGrid() {
     { 
       title: "DIVERSE", 
       img: "/diversity.jpg",
-      desc: "Providing versatile security solutions taxilored to commercial, residential, and event-specific needs."
+      desc: "Providing versatile security solutions tailored to commercial, residential, and event-specific needs."
     },
   ];
 
   return (
-    <section id="our-services" className="bg-transparent py-16 md:py-24 px-4 sm:px-6 text-white text-center">
+    <section id="services" className="bg-transparent py-16 md:py-24 px-4 sm:px-6 text-white text-center">
       <div className="mb-12 md:mb-16">
         <h2 className="text-3xl md:text-4xl font-black uppercase italic tracking-tight">
           HOW WE PROVIDE <span className="text-[#e63928]">OUR SERVICES</span>
@@ -34,13 +33,23 @@ export default function ServiceGrid() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 max-w-7xl mx-auto">
         {cards.map((card, i) => (
           <div key={i} className="group flex flex-col items-center">
-            <div className="relative w-full aspect-[4/5] md:h-80 rounded-3xl overflow-hidden border border-white/5 mb-6 shadow-2xl">
+            {/* 
+                THE FIX: 
+                1. Changed mobile aspect to 'aspect-video' (16/9) so the wide photo fits perfectly.
+                2. Kept 'md:aspect-[4/5]' for the laptop look you liked.
+            */}
+            <div className="relative w-full aspect-video md:aspect-[4/5] md:h-80 rounded-3xl overflow-hidden border border-white/5 mb-6 shadow-2xl bg-black">
               <Image 
                 src={card.img} 
                 alt={card.title} 
                 fill 
-                className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                /* 
+                   'object-cover' now works perfectly because the container 
+                   shape matches the image shape on mobile. 
+                */
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, 33vw"
+                priority={i === 0}
               />
             </div>
 
@@ -48,7 +57,6 @@ export default function ServiceGrid() {
               {card.title}
             </h3>
             
-            {/* 2. Updated to use card.desc instead of hardcoded text */}
             <p className="text-gray-500 text-[10px] md:text-xs leading-relaxed max-w-[280px]">
               {card.desc}
             </p>
