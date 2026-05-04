@@ -9,7 +9,7 @@ const siteImages = [
   "/patrol-3.jpg",
   "/patrol-4.jpg",
   "/patrol-5.jpg",
-  "/patrol-6.jpg",
+  "/patrol-7.jpg",
 ];
 
 const reviewScreenshots = [
