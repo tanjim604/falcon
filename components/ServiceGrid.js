@@ -4,17 +4,17 @@ export default function ServiceGrid() {
   const cards = [
     { 
       title: "EFFECTIVE", 
-      img: "/effective2.jpg",
+      img: "/effective4.jpg",
       desc: "Our strategic approach ensures maximum security coverage with rapid response times and reliable oversight." 
     },
     { 
       title: "PROFESSIONAL", 
-      img: "/prof.jpg",
+      img: "/prof2.jpg",
       desc: "Highly trained personnel committed to the highest standards of integrity, appearance, and conduct."
     },
     { 
       title: "DIVERSE", 
-      img: "/diversity.jpg",
+      img: "/diversity2.jpg",
       desc: "Providing versatile security solutions tailored to commercial, residential, and event-specific needs."
     },
   ];
