@@ -7,6 +7,7 @@ import SubContract from '@/components/SubContract';
 import Careers from '@/components/Careers'; // Added this import
 import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
+import SiteShowcase from '@/components/SiteShowcase';
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
       <WhyUs />
       <ServiceGrid />
       <SubContract /> 
-      <Careers /> {/* Added this component */}
+      <Careers /> 
+      <SiteShowcase/>
       <ContactForm />
       <Footer />
     </main>

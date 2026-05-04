@@ -1,34 +1,34 @@
 import Image from 'next/image';
 
 export default function FeatureCards() {
-  const services = [
-   {
-  title: "Event Security",
-  desc: "Trained professionals for events of all sizes. We specialize in crowd control, access management, bag checks, and guest safety. Our team ensures a smooth, secure environment so your event runs without disruption.",
-  img: "/event.jpg", 
-  },
-{
-    title: "Static Guarding",
-    desc: "Reliable on-site protection for your property. We provide security for construction sites, retail stores, residential buildings, clubs, and bars, with strong presence, access control, and incident prevention.",
-    img: "/static3.jpg",
-  },
-  {
-    title: "Mobile Patrols",
-    desc: "Flexible patrols to keep your property secure. Our mobile units conduct randomized and scheduled patrols, checking your site as frequently as needed to deter crime and ensure everything stays under control.",
-    img: "/patrol.jpg",
-  },
-  {
-    title: "Alarm Response",
-    desc: "24/7 rapid response when it matters most. We respond immediately to alarm activations, handle trespassing, site checks, and safe removals, ensuring your property remains protected at all times.",
-    img: "/alarm.jpg",
-  }
+const services = [
+    {
+      title: "Event Security",
+      desc: "Professional crowd control and access management for events of any scale, ensuring guest safety and a disruption-free environment.",
+      img: "/event-1.jpg", 
+    },
+    {
+      title: "Static Guarding",
+      desc: "Dedicated on-site protection for construction, retail, and residential sites, focusing on access control and incident prevention.",
+      img: "/static4.jpg",
+    },
+    {
+      title: "Mobile Patrols",
+      desc: "Randomized and scheduled vehicle patrols providing a visible deterrent and frequent site checks to ensure total control.",
+      img: "/vehicle-1.jpg",
+    },
+    {
+      title: "Alarm Response",
+      desc: "Immediate 24/7 response to alarm activations and trespassing, providing rapid site checks to keep your property protected.",
+      img: "/alarm-1.jpg",
+    }
   ];
 
   return (
     <section id="services" className=" bg-white py-24 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-black text-center mb-16 uppercase italic text-black tracking-tight">
-          Take A Look At <span className="text-[#e63928]">Services We Provide</span>
+          SERVICES <span className="text-[#e63928]">WE Provide</span>
         </h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -44,12 +44,12 @@ export default function FeatureCards() {
                   fill 
                   className="object-cover group-hover:scale-110 transition-transform duration-700" 
                   /* 
-                      CUSTOM ALIGNMENT LOGIC:
-                      - 50% is horizontal center.
-                      - 10% is vertical (Adjust this 10% lower to show more of the top).
+                      FIX: Target index 2 (Mobile Patrols) to align left.
+                      - 'left center' ensures the left side of the pic is pinned.
+                      - index 1 (Static) kept your custom 50% 35% tweak.
                   */
                   style={{ 
-                    objectPosition: i === 1 ? '50% 35%' : 'center' 
+                    objectPosition: i === 2 ? 'left center' : i === 1 ? '50% 35%' : 'center' 
                   }}
                   sizes="(max-width: 768px) 100vw, 25vw"
                 />

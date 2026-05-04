@@ -47,7 +47,7 @@ export default function ContactForm() {
               </div>
               <div>
                 <h3 className="font-bold text-lg mb-1 uppercase tracking-tight">Chat With Us</h3>
-                <p className="text-gray-500 text-sm">falconsecurity26@gmail.com</p>
+                <p className="text-gray-500 text-sm">admin@falconsecurity.info</p>
               </div>
             </div>
 
