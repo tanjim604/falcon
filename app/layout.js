@@ -15,7 +15,14 @@ const geistMono = Geist_Mono({
 export const metadata = {
   title: "Falcon Security Ltd | Professional Security Services in Kamloops",
   description: "Elite security solutions in Kamloops, BC. Specializing in mobile patrols, static guarding, event security, and 24/7 alarm response.",
-  metadataBase: new URL('https://falconsecurity.info'), // Helps resolve image paths
+  metadataBase: new URL('https://falconsecurity.info'),
+  
+  // MATCHING YOUR app/ FOLDER FILES
+  icons: {
+    icon: '/icon.png?v=1',
+    apple: '/apple-icon.png?v=1',
+  },
+
   openGraph: {
     title: "Falcon Security Ltd",
     description: "Professional Security Services in Kamloops, BC.",
@@ -23,7 +30,7 @@ export const metadata = {
     siteName: "Falcon Security Ltd",
     images: [
       {
-        url: "/logo.jpg", 
+        url: "/logo.jpg", // This should remain in your /public folder for sharing
         width: 1200,
         height: 630,
         alt: "Falcon Security Ltd Logo",
