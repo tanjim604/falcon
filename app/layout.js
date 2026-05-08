@@ -17,11 +17,22 @@ export const metadata = {
   description: "Elite security solutions in Kamloops, BC. Specializing in mobile patrols, static guarding, event security, and 24/7 alarm response.",
   metadataBase: new URL('https://falconsecurity.info'),
   
-  // MATCHING YOUR app/ FOLDER FILES
+  // COMPREHENSIVE ICON SETTINGS
   icons: {
-    icon: '/icon.png?v=1',
-    apple: '/apple-icon.png?v=1',
+    icon: [
+      { url: '/icon.png?v=2' }, // Rename favicon-32x32.png to icon.png in /app
+      { url: '/favicon-16x16.png?v=2', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: [
+      { url: '/favicon.ico?v=2' } // Essential for Google Search indexing
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png?v=2', sizes: '180x180', type: 'image/png' }, // Specifically for Safari/iOS
+    ],
   },
+
+  // Android/Chrome support
+  manifest: '/site.webmanifest',
 
   openGraph: {
     title: "Falcon Security Ltd",
@@ -30,7 +41,7 @@ export const metadata = {
     siteName: "Falcon Security Ltd",
     images: [
       {
-        url: "/logo.jpg", // This should remain in your /public folder for sharing
+        url: "/logo.jpg", // Kept in /public for link sharing/WhatsApp
         width: 1200,
         height: 630,
         alt: "Falcon Security Ltd Logo",
